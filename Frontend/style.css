@@ -1,0 +1,38 @@
+body{
+    font-family:sans-serif;
+}
+i{
+    margin-right: 10px;
+    color: #fff;
+}
+.navbar{
+    background-color: rgb(66, 6, 119);
+}
+.Maincontainer{
+    background-color: #c6b9b1;
+    color: rgb(66, 3, 120);
+    text-align: center;
+    height: 200px;
+    background-image: url('/download.jpg');
+    font-size: 30px;
+}
+
+.Maincontainer h1{
+    color: rgb(66, 3, 120);
+    font-size: 80px;
+    padding: 30px 10px 10px;
+}
+
+.products{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:10px;
+}
+
+footer{
+    background-color: rgb(66, 6, 119);
+    color: #fff;
+    text-align: center;
+}
