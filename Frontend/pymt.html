@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+    <link rel="stylesheet" href="pymt.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <i class="fa-brands fa-opencart"></i>
+            <a class="navbar-brand" href="#">Payment Page</a>
+        </div>
+    </nav>
+    <div class="form">
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email..."><br>
+        <label for="Payment">Payment method</label><br>
+        <select name="payment method" id="payment-method">
+            <option value="select" selected>Select Payment Method</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="debit-card">Debit Card</option>
+            <option value="UPI">UPI</option>
+            <option value="Cash on delivery">Cash on delivery</option>
+        </select>
+        <!-- Card Details -->
+<div id="card-details" style="display: none;">
+    <label for="card-number">Card Number</label>
+    <input 
+        type="text" 
+        id="card-number"
+        placeholder="Enter card number"
+        maxlength="16"
+    >
+</div>
+
+<!-- UPI Details -->
+<div id="upi-details" style="display: none;">
+    <label for="upi-id">UPI ID</label>
+    <input 
+        type="text" 
+        id="upi-id"
+        placeholder="example@upi"
+    >
+</div>
+        <label for="address">Shipping Address</label><br>
+        <textarea id="address" name="address" placeholder="Enter your Full address..."></textarea><br>
+    <button type="submit" class="btn btn-primary" id="proceed-btn">
+        Proceed to Payment
+    </button>
+    </div>
+    <script src="pymt.js"></script>
+    <div id="success-message">
+    <h2>Thank you for placing your order! 🎉</h2>
+    <p>Your order has been placed successfully.</p>
+</div>
+</body>
+</html>

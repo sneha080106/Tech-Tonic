@@ -8,15 +8,16 @@ i{
     color: #fff;
 }
 .navbar{
-    background-color: rgb(66, 6, 119);
+    background: linear-gradient(90deg, #6f42c1, rgb(66, 6, 119));
 }
 .Maincontainer{
     background-color: #c6b9b1;
     color: rgb(66, 3, 120);
     text-align: center;
     height: 200px;
-    background-image: url('/download.jpg');
+    background-image: url('/bg.png');
     font-size: 30px;
+    border: 2px solid rgb(66, 3, 120);
 }
 
 .Maincontainer h1{
@@ -29,8 +30,9 @@ i{
 #box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    padding: 25px;
+    gap: 20px;
+    padding: 20px;
+    background-color:#ebf1f5;
 }
 
 .child {
@@ -38,37 +40,54 @@ i{
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
     background: white;
+    border: 2px solid rgb(66, 3, 120);
 }
 
 .child img {
     width: 100%;
-    height: 220px;
+    height: 150px;
     object-fit: contain;
     display: block;
+    border: 1px solid rgb(66, 3, 120);
 }
 
 .product input {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
+    height: 200px;
 }
 
 .product p {
-    line-height: 1.5;
+    line-height: 1.3;
+    margin-bottom: 8px;
 }
 
 .product button {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
+    background: linear-gradient(90deg, rgb(66, 6, 119), #8b5cf6);
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: all 0.25s ease;
+}
+
+.product button:hover{
+     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.3);
 }
 
 /* Tablet: 3 products */
 @media (min-width: 768px) {
     #box {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .child img{
+        height: 200px;
     }
 }
 
@@ -77,13 +96,9 @@ i{
     #box {
         grid-template-columns: repeat(4, 1fr);
     }
-}
-
-.products button{
-    background-color: rgb(66, 6, 119);
-    color: #fff;
-    border-radius: 30px;
-    font-size: 20px;
+    .child img{
+        height: 200px;
+    }
 }
 
 footer{
@@ -93,3 +108,4 @@ footer{
     width: 100%;
     margin: 0 !important;
 }
+

@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #f5f3ff, #eef2ff);
+    color: #212529;
+}
+
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #6f42c1, rgb(66, 6, 119));
+    padding: 14px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .fa-opencart {
+    color: white;
+    font-size: 32px;
+    margin-right: 12px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+/* ---------- Payment Form ---------- */
+
+.form {
+    width: min(90%, 480px);
+    margin: 70px auto 25px;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ---------- Labels ---------- */
+
+.form label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+
+/* ---------- Inputs & Select ---------- */
+
+.form input,
+.form select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    margin-bottom: 22px;
+
+    border: 1px solid #d9d9e3;
+    border-radius: 9px;
+
+    background-color: #fafafa;
+    color: #343a40;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+.form input::placeholder {
+    color: #9a9a9a;
+}
+
+.form input:focus,
+.form select:focus {
+    background-color: white;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+.form textarea{
+    width: 100%;
+    height: 100px;
+}
+
+
+/* ---------- Button ---------- */
+
+.form button {
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(90deg, rgb(66, 6, 119), #8b5cf6);
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.3);
+}
+
+.form button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+    .form button {
+        height: 47px;
+        font-size: 15px;
+    }
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar .fa-opencart {
+        font-size: 28px;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    .form {
+        margin-top: 50px;
+        padding: 30px;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 480px) {
+
+    .navbar .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .navbar .fa-opencart {
+        font-size: 26px;
+        margin-right: 9px;
+    }
+
+    .navbar-brand {
+        font-size: 19px;
+    }
+
+    .form {
+        width: calc(100% - 30px);
+        margin: 35px auto 20px;
+        padding: 25px 20px;
+        border-radius: 14px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    .form input,
+    .form select {
+        height: 46px;
+        font-size: 14px;
+        margin-bottom: 19px;
+    }
+
+    .btn {
+        width: calc(100% - 30px);
+    }
+
+    .btn button {
+        height: 46px;
+        font-size: 15px;
+    }
+}
+
+
+/* ---------- Very Small Screens ---------- */
+
+@media (max-width: 320px) {
+
+    .navbar-brand {
+        font-size: 17px;
+    }
+
+    .form {
+        width: calc(100% - 20px);
+        padding: 20px 15px;
+    }
+
+    .btn {
+        width: calc(100% - 20px);
+    }
+}
+
+#success-message {
+    display: none;
+    width: min(90%, 480px);
+    margin: 50px auto;
+    padding: 35px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#success-message h2 {
+    color: #6f42c1;
+    margin-bottom: 10px;
+}
+
+#success-message p {
+    color: #666;
+}
+.success-message {
+    width: min(90%, 500px);
+    margin: 80px auto;
+    padding: 40px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #6f42c1;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.success-message h2 {
+    color: #6f42c1;
+    margin-bottom: 12px;
+}
+
+.success-message p {
+    color: #555;
+    font-size: 16px;
+}
+
+.success-message .email-text {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.success-message button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(90deg, rgb(66, 6, 119), #8b5cf6);
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.success-message button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.3);
+}
