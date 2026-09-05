@@ -41,7 +41,7 @@ app.post('/api/orders', async (req, res) => {
 });
 
 // Koi bhi route jo API na ho, index.html serve karo (fallback)
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../Frontend', 'index.html'));
 });
 
