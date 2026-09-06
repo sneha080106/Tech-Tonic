@@ -47,7 +47,7 @@ proceedBtn.addEventListener("click", async function () {
     };
 
     try {
-        const response = await fetch("/api/orders", ... {
+        const response = await fetch("/api/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
